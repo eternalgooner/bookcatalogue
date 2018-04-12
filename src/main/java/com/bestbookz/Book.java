@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.bestbookz.com;
+package com.bestbookz;
 
 import javax.xml.bind.annotation.XmlRootElement;
 /**
@@ -24,6 +19,12 @@ public class Book{
     public Book(int id, String title, String author, String publisher) {
         this.id = id;
         this.title = title;
+        this.author = author;
+        this.publisher = publisher;
+    }
+    
+    public Book(String title, String author, String publisher) {
+    	this.title = title;
         this.author = author;
         this.publisher = publisher;
     }
@@ -58,5 +59,12 @@ public class Book{
 
     public void setPublisher(String publisher) {
         this.publisher = publisher;
-    }    
+    }
+
+	@Override
+	public String toString() {
+		return "Book [id=" + id + ", title=" + title + ", author=" + author + ", publisher=" + publisher + "]";
+	}    
+    
+    
 }
